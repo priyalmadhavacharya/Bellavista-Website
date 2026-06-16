@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellavista</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+               <div class="logo-tagline">
+                    <div class="logo">
+                        <h2>Bella vista</h2>
+                    </div>
+                    <div class="tagline">
+                        <span>Authentic,Italian food</span>
+                    </div>
+                    <ul class="nav-item">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+               </div> 
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="home">
+            <div id="home" class="hero">
+                <div class="hero-content">
+                    <h2>Welcome to Bella vista</h2>
+                    <p>
+                        Experience the taste of Italy with out authentic dishes made from traditional recipes and fresh ingredients. 
+                    </p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn-primary btn">View Menu</a>
+                    <a href="contact" class="btn-secondary btn">Make Reservation</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu">
+            <div class="menu" id="menu">
+                <div class="menu-head">
+                    <h2>Our Menu</h2>
+                </div>
+                <div class="menu-line">
+                    <p>Discover our delicious selection of traditional Italian dishes made with the finest ingredients</p>
+                </div>
+                <div class="menu-categories">
+                    <div class="menu-category">
+                        <h2>Appetizers</h2>
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <h4>Bruschwtta</h4>
+                            <p>Grilled bread topped with fresh tomatoes,garlic,basil,and olive oil.</p>
+                        </div>
+                        <span>$12</span>
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <h4>Antipasto Platter</h4>
+                            <p>Assorted cured meats,cheeses,olives, and marinated vegetables.</p>
+                        </div>
+                        <span>$18</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="about-container" id="about">
+                <div class="section-title">
+                    <h2>About Bellavista</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Our Story</h2>
+                        <p>Bella vista was founded in 2010 with a passion for bringing authentic Italian flavors to our
+                        community. Our family-owned restaurant has been serving traditional Italian dishes made with
+                        the
+                        freshest ingredients and time-honored recipes.</p>
+                        <p>We are committed to providing an authentic dining experience that brings the warmth and
+                        tradition
+                        of Italy to your table.</p>
+                    </div>
+                    <div class="about-img">
+                       <img src=c:\Users\PC\OneDrive\Desktop\web_project\Bellavista Cafe & Skybar, Civil Lines, Nagpur _ Zomato.html alt="restaurant" width="45%"> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="contact" id="contact">
+                <div class="contact-head">
+                    <h2>Contact US</h2>
+                </div>
+                <div class="contact-body">
+                    <div class="get-in-touch">
+                        <h3>Get in Touch</h3>
+                        <span>Address:</span>
+                        <p>1234 Pasta Lane,Foodie City,FL 56789</p>
+                        <span>Phone:</span>
+                        <p>(123) 456-7890</p>
+                        <span>Email:</span>
+                        <p>info@bellavista.com</p>
+                    </div>
+                    <div class="make-reservation">
+                        <h3>Make a Reservation</h3>
+                        <form name="rev-form" id="rev-form" method="post" onsubmit="return f1();">
+                            <label for="name">Full Name:</label><br>
+                            <input type="text" name="nm" id="nm" autofocus><br>
+                            
+                            <label for="email">Email:</label><br>
+                            <input type="email" name="eml" id="eml"><br>
+
+                            <label for="phone">Phone:</label><br>
+                            <input type="tel" name="ph" id="ph"><br>
+
+                            <label for="date">Reservation Date:</label><br>
+                            <input type="date" name="dt" id="dt"><br>
+
+                            <label for="time">Select Time:</label><br>
+                            <select name="tm" id="tm">
+                                <option value="#">Select-Time</option>
+                                <option value="1">6 P.M</option>
+                                <option value="2">7 P.M</option>
+                                <option value="3">8 P.M</option>
+                                <option value="4">9 P.M</option>
+                            </select><br>
+
+                            <label for="guest">Number of Guest:</label><br>
+                            <select name="gst" id="gst">
+                                <option value="#">Select-Number</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5+ Guests</option>
+                            </select><br>
+
+                            <label for="request">Special Requests:</label><br>
+                            <textarea name="rq" id="rq" rows="5"
+                            placeholder="Any special dietary requirments or requests..."></textarea><br>
+
+                            <input type="submit" value="Submit Reservation" onclick="return f1();">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+<script>
+function f1()
+{
+    if(rev-form.nm.value=="")
+    {
+        alert("Enter Your Full Name");
+        rev-form.nm.focus();
+        return false;
+    }
+    else if(rev-form.eml.value=="")
+    {
+        alert("Enter Your Email");
+        rev-form.eml.focus();
+        return false;
+    }
+    else if(rev-form.ph.value=="")
+    {
+        alert("Enter Your Phone Number");
+        rev-form.ph.focus();
+        return false;
+    }
+    else if(rev-form.dt.value=="")
+    {
+        alter("Please select your Reservation Date");
+        rev-form.dt.focus();
+        return false;
+    }
+    else if(rev-form.tm.value=="")
+    {
+        alert("Please select your Reservation Time");
+        rev-form.tm.focus();
+        return false;
+    }
+    else if(rev-form.gst.value=="")
+    {
+        alert("Please select Number of Guests");
+        rev-form.gst.focus();
+        return false;
+    }
+}
+</script>
